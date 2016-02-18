@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.dani.conversor.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="#fdcbcfd2">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Origen"
+        android:id="@+id/tv_origen"
+        android:layout_toStartOf="@+id/cantidad"
+        android:layout_alignTop="@+id/origengroup" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/origengroup"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/destinogroup"
+        android:layout_marginTop="45dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bytes"
+            android:id="@+id/obytes"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KiloBytes"
+            android:id="@+id/okilobytes"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MegaBytes"
+            android:id="@+id/omegabytes"
+            android:checked="false" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cantidad:"
+        android:id="@+id/tv_cantidad"
+        android:layout_alignBaseline="@+id/cantidad"
+        android:layout_alignBottom="@+id/cantidad"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cantidad"
+        android:layout_below="@+id/origengroup"
+        android:layout_marginTop="40dp"
+        android:layout_toEndOf="@+id/tv_cantidad" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Destino:"
+        android:id="@+id/tv_destino"
+        android:layout_above="@+id/calcular"
+        android:layout_alignEnd="@+id/tv_cantidad"
+        android:layout_marginBottom="127dp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/destinogroup"
+        android:layout_alignTop="@+id/tv_destino"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/calcular">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bytes"
+            android:id="@+id/dbytes"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KyloBytes"
+            android:id="@+id/dkilobytes"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MegaBytes"
+            android:id="@+id/dmegabytes"
+            android:checked="false" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:id="@+id/calcular"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#f9b49ac6" />
+
+</RelativeLayout>
